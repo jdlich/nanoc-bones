@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+#
+#   Compile
+#
+compile '/styles/' do
+  filter :erb
+  filter :less
+  filter :rainpress
+end
+
+compile '/styles/*' do
+  # don't filter partial stylesheets
+end
+
+compile '*' do
+  filter :erb
+  layout 'default'
+end
+
+#
+#   Routing
+#
+route '/styles/' do
+  '/css/' + rep.item.identifier.gsub('/','') + '.css'
+end
+
+route '/styles/*' do
+  nil # don't output partial stylesheets
+end
+
+route '*' do
+  if item[:php]
+    rep.item.identifier + 'index.php'
+  else
+    rep.item.identifier + 'index.html'
+  end
+end
+
+#
+#   Layouts
+#
+layout '*', :erb
