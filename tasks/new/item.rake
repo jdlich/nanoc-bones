@@ -13,8 +13,9 @@ namespace :new do
       # content
       %{<h1>Title</h1>},
       
-      # attributes 
-      { :title => 'Title',
+    { # attributes
+        :title => 'Title',
+        :description => 'Meta description.',
         :section => ''
       },
       

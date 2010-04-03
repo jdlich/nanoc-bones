@@ -12,7 +12,7 @@ module Nanoc3::Helpers
       scripts = scripts.split(', ')
 
       scripts.map do |script|
-        %{<script type="text/javascript" src="/javascript/#{script}.js"></script>}
+        %{<script type="text/javascript" src="/scripts/#{script}.js"></script>}
       end
     end 
   end

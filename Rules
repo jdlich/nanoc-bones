@@ -6,7 +6,7 @@
 compile '/styles/' do
   filter :erb
   filter :less
-  filter :rainpress
+  filter :rainpress 
 end
 
 compile '/styles/*' do
@@ -22,7 +22,7 @@ end
 #   Routing
 #
 route '/styles/' do
-  '/css/' + rep.item.identifier.gsub('/','') + '.css'
+  '/styles/' + rep.item.identifier.gsub('/','') + '.css'
 end
 
 route '/styles/*' do
