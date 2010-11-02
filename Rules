@@ -1,40 +1,58 @@
 #!/usr/bin/env ruby
 
+require 'compass'
+
+Compass.configuration.parse 'compass_config.rb'
+
+#
+#   Routing
+#
+route '/robots' do
+  '/robots.txt'
+end
+
+route '/scripts/_*/' do; nil; end
+route '/scripts/scripts/' do
+  item.identifier.gsub(/\/$/,'.js')
+end
+
+route '/styles/_*/' do; nil; end
+route '/styles/styles/' do
+ item.identifier.gsub(/\/$/, '.css')
+end
+
+route '/styles/ie/' do
+  item.identifier.gsub(/\/$/, '.css')
+end
+
+route '*' do
+  item.identifier + 'index.html'
+end
+
 #
 #   Compile
 #
-compile '/styles/' do
+compile '/htaccess/' do; end
+compile '/robots/'   do; end
+
+compile '/scripts/_*/' do; end
+compile '/scripts/scripts/' do
   filter :erb
-  filter :less
-  filter :rainpress 
+  filter :yui_compressor
 end
 
-compile '/styles/*' do
-  # don't filter partial stylesheets
+compile '/styles/_*/' do; end 
+compile '/styles/styles/' do
+  filter :sass, Compass.sass_engine_options
+end
+
+compile '/styles/ie/' do
+  filter :sass, Compass.sass_engine_options
 end
 
 compile '*' do
   filter :erb
   layout 'default'
-end
-
-#
-#   Routing
-#
-route '/styles/' do
-  '/styles/' + rep.item.identifier.gsub('/','') + '.css'
-end
-
-route '/styles/*' do
-  nil # don't output partial stylesheets
-end
-
-route '*' do
-  if item[:php]
-    rep.item.identifier + 'index.php'
-  else
-    rep.item.identifier + 'index.html'
-  end
 end
 
 #

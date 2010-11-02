@@ -1,0 +1,41 @@
+#
+# 	Miscellaneous
+#
+# error pages
+ErrorDocument 404 http://www.yoursite.com/404/
+
+#
+# 	Rewrite rules
+#
+Options +FollowSymLinks 
+RewriteEngine on 
+# redirect non-www to www
+RewriteCond %{HTTP_HOST} ^yoursite.com [NC] 
+RewriteRule ^(.*)$ http://www.yoursite.com/$1 [L,R=301]
+# redirect /index.html => /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/ 
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+#
+# 	Compress text files.
+#
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+# compress content with type html, text, js, and css
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/x-javascript
+<IfModule mod_headers.c>
+# properly handle requests coming from behind proxies
+Header append Vary User-Agent
+</IfModule>
+
+# Properly handle old browsers that do not support compression
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# Explicitly exclude binary files from compression just in case
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|pdf|swf|ico|zip)$ no-gzip
+</IfModule>

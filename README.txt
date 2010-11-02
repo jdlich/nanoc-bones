@@ -1,0 +1,1 @@
+Don't forget to put your own domain in config.yaml and htaccess and also put your server root in publish.rake as the destination
