@@ -1,0 +1,377 @@
+//
+//	Blueprint (modified)
+//
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+ 	list-style: none; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+table, td, th {
+  vertical-align: middle; }
+
+a {
+  outline: none; }
+
+a img {
+  border: none; }
+
+.container {
+  width: 950px;
+  margin: 0 auto; }
+
+.column {
+  float: left;
+  margin-right: 10px; }
+
+div {
+  .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24 {
+    float: left;
+    margin-right: 10px; } }
+
+.last, div.last {
+  margin-right: 0; }
+
+.span-1 {
+  width: 30px; }
+
+.span-2 {
+  width: 70px; }
+
+.span-3 {
+  width: 110px; }
+
+.span-4 {
+  width: 150px; }
+
+.span-5 {
+  width: 190px; }
+
+.span-6 {
+  width: 230px; }
+
+.span-7 {
+  width: 270px; }
+
+.span-8 {
+  width: 310px; }
+
+.span-9 {
+  width: 350px; }
+
+.span-10 {
+  width: 390px; }
+
+.span-11 {
+  width: 430px; }
+
+.span-12 {
+  width: 470px; }
+
+.span-13 {
+  width: 510px; }
+
+.span-14 {
+  width: 550px; }
+
+.span-15 {
+  width: 590px; }
+
+.span-16 {
+  width: 630px; }
+
+.span-17 {
+  width: 670px; }
+
+.span-18 {
+  width: 710px; }
+
+.span-19 {
+  width: 750px; }
+
+.span-20 {
+  width: 790px; }
+
+.span-21 {
+  width: 830px; }
+
+.span-22 {
+  width: 870px; }
+
+.span-23 {
+  width: 910px; }
+
+.span-24, div.span-24 {
+  width: 950px;
+  margin-right: 0; }
+
+.append-1 {
+  padding-right: 40px; }
+
+.append-2 {
+  padding-right: 80px; }
+
+.append-3 {
+  padding-right: 120px; }
+
+.append-4 {
+  padding-right: 160px; }
+
+.append-5 {
+  padding-right: 200px; }
+
+.append-6 {
+  padding-right: 240px; }
+
+.append-7 {
+  padding-right: 280px; }
+
+.append-8 {
+  padding-right: 320px; }
+
+.append-9 {
+  padding-right: 360px; }
+
+.append-10 {
+  padding-right: 400px; }
+
+.append-11 {
+  padding-right: 440px; }
+
+.append-12 {
+  padding-right: 480px; }
+
+.append-13 {
+  padding-right: 520px; }
+
+.append-14 {
+  padding-right: 560px; }
+
+.append-15 {
+  padding-right: 600px; }
+
+.append-16 {
+  padding-right: 640px; }
+
+.append-17 {
+  padding-right: 680px; }
+
+.append-18 {
+  padding-right: 720px; }
+
+.append-19 {
+  padding-right: 760px; }
+
+.append-20 {
+  padding-right: 800px; }
+
+.append-21 {
+  padding-right: 840px; }
+
+.append-22 {
+  padding-right: 880px; }
+
+.append-23 {
+  padding-right: 920px; }
+
+.prepend-1 {
+  padding-left: 40px; }
+
+.prepend-2 {
+  padding-left: 80px; }
+
+.prepend-3 {
+  padding-left: 120px; }
+
+.prepend-4 {
+  padding-left: 160px; }
+
+.prepend-5 {
+  padding-left: 200px; }
+
+.prepend-6 {
+  padding-left: 240px; }
+
+.prepend-7 {
+  padding-left: 280px; }
+
+.prepend-8 {
+  padding-left: 320px; }
+
+.prepend-9 {
+  padding-left: 360px; }
+
+.prepend-10 {
+  padding-left: 400px; }
+
+.prepend-11 {
+  padding-left: 440px; }
+
+.prepend-12 {
+  padding-left: 480px; }
+
+.prepend-13 {
+  padding-left: 520px; }
+
+.prepend-14 {
+  padding-left: 560px; }
+
+.prepend-15 {
+  padding-left: 600px; }
+
+.prepend-16 {
+  padding-left: 640px; }
+
+.prepend-17 {
+  padding-left: 680px; }
+
+.prepend-18 {
+  padding-left: 720px; }
+
+.prepend-19 {
+  padding-left: 760px; }
+
+.prepend-20 {
+  padding-left: 800px; }
+
+.prepend-21 {
+  padding-left: 840px; }
+
+.prepend-22 {
+  padding-left: 880px; }
+
+.prepend-23 {
+  padding-left: 920px; }
+
+.pull-1 {
+  margin-left: -40px; }
+
+.pull-2 {
+  margin-left: -80px; }
+
+.pull-3 {
+  margin-left: -120px; }
+
+.pull-4 {
+  margin-left: -160px; }
+
+.pull-1, .pull-2, .pull-3, .pull-4 {
+  float: left;
+  position: relative; }
+
+.push-1 {
+  margin: 0 -40px 1.5em 40px; }
+
+.push-2 {
+  margin: 0 -80px 1.5em 80px; }
+
+.push-3 {
+  margin: 0 -120px 1.5em 120px; }
+
+.push-4 {
+  margin: 0 -160px 1.5em 160px; }
+
+.push-1, .push-2, .push-3, .push-4 {
+  float: right;
+  position: relative; }
+
+.prepend-top-0 {
+  margin-top: 9px; }
+
+.prepend-top-1 {
+  margin-top: 18px; }
+
+.prepend-top-2 {
+  margin-top: 27px; }
+
+.prepend-top-3 {
+  margin-top: 36px; }
+
+.prepend-top-4 {
+  margin-top: 45px; }
+
+.prepend-top-5 {
+  margin-top: 54px; }
+
+.append-bottom-none {
+  margin-bottom: 0; }
+
+.append-bottom-0 {
+  margin-bottom: 9px; }
+
+.append-bottom-1 {
+  margin-bottom: 18px; }
+
+.append-bottom-2 {
+  margin-bottom: 27px; }
+
+.append-bottom-3 {
+  margin-bottom: 36px; }
+
+.append-bottom-4 {
+  margin-bottom: 45px; }
+
+.append-bottom-5 {
+  margin-bottom: 54px; }
+
+.move-up-0 {
+  margin-top: -9px; }
+
+.move-up-1 {
+  margin-top: -18px; }
+
+.move-up-2 {
+  margin-top: -27px; }
+
+.move-up-3 {
+  margin-top: -36px; }
+
+.move-up-4 {
+  margin-top: -45px; }
+
+.move-up-5 {
+  margin-top: -54px; }
+
+hr {
+  background: #dddddd;
+  color: #dddddd;
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 1px;
+  border: none;
+  .space {
+    background: white;
+    color: white;
+    visibility: hidden; } }
+
+.clearfix:after, .container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.clearfix, .container {
+  display: block; }
+
+.clear {
+  clear: both; }
+
+.small {
+  font-size: 10px; }
+
+header, footer, section, nav {
+  display: block; }
