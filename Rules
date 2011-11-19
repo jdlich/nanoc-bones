@@ -21,10 +21,6 @@ route '/styles/styles/' do
  item.identifier.gsub(/\/$/, '.css')
 end
 
-route '/styles/ie/' do
-  item.identifier.gsub(/\/$/, '.css')
-end
-
 route '*' do
   item.identifier + 'index.html'
 end
@@ -43,10 +39,6 @@ end
 
 compile '/styles/_*/' do; end 
 compile '/styles/styles/' do
-  filter :sass, Compass.sass_engine_options
-end
-
-compile '/styles/ie/' do
   filter :sass, Compass.sass_engine_options
 end
 
